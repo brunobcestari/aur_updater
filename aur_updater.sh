@@ -1,6 +1,6 @@
 #!/bin/sh
 
-FILE_PATH="/home/bruno/Aur_Packages"
+FILE_PATH="$HOME/Aur_Packages"
 
 for files in $(ls $FILE_PATH); do
 	cd $FILE_PATH/$files
