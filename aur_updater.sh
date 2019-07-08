@@ -12,7 +12,7 @@ for BASEDIR in $(ls $FILE_PATH); do
 	fi
 	PKGNAME=$(cat PKGBUILD | grep "pkgname=" | head -1 | cut -f2 -d"=" | sed "s/'//g")
 	LAST_VER=$(cat PKGBUILD | grep "pkgver=" | head -1 | cut -f2 -d"=")
-	ACTUAL_VER=$(pacman -Qem | grep $PKGNAME" " | cut -f2 -d" " | cut -f2 -d" " | cut -f1 -d"-")
+	ACTUAL_VER=$(pacman -Qem | grep $PKGNAME" " | cut -f2 -d" " | cut -f2 -d" " | cut -f1 -d"-" | cut -f2 -d":")
 	echo "Last version: $LAST_VER"
 	echo "Actual version: $ACTUAL_VER"
 
